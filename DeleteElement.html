@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Delete Element</title>
+</head>
+<style>
+    h1{
+        color: rgb(6, 57, 151);
+        font-size: large;
+        font-style: italic;
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    }
+</style>
+<body bgcolor="yellow">
+
+    <body style="text-align: center;">
+    <h1>
+        Delete An Element From A Specified Index Number, And Return
+        The New Array Without The Deleted Element
+    </h1>
+    <script>
+        function remove_array_element(array, n) {
+            var index = array.indexOf(n);
+            if (index > -1) {
+                array.splice(index, 1);
+            }
+            return array;
+        }
+
+        document.write(remove_array_element([3, 8, 0, 4], 8));
+    </script>
+     </body>
+</body>
+
+</html>

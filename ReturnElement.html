@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Returning Element</title>
+</head>
+<style>
+    h1{
+        color: aqua;
+    }
+    p{
+        color: rgb(198, 226, 43);
+        font-size: medium;
+        font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    }
+    button{
+        color: blue;
+    }
+</style>
+<body bgcolor="black">
+
+    <body style="text-align:center;">
+        <h1>
+            Returning The Index Numbers Of All Occurrences
+        </h1>
+
+        <p id="CS_UP">
+         </p>
+
+        <button onclick="CS_Fun()">
+            Click Here
+        </button>
+
+        <p id="CS_DOWN">
+        </p>
+
+        <script>
+            var up = document.getElementById('CS_UP');
+            var down = document.getElementById('CS_DOWN');
+
+            var arr = [
+                'CS', 'Mechanical', 'Civil',
+                'EC', 'Mechanical',
+                'CS', 'CS'
+            ];
+
+            var elm = 'CS';
+
+            up.innerHTML = "Click on the button to find "
+                + "the position of element in "
+                + "array.<br><br>Array = ["
+                + arr + "]<br>" + "Element - '"
+                + elm + "'";
+
+            function getInd(arr, val) {
+                var index = [], i = -1;
+                while ((i = arr.indexOf(val, i + 1)) != -1) {
+                    index.push(i);
+                }
+                return index;
+            }
+
+            function CS_Fun() {
+                down.innerHTML = getInd(arr, elm);
+            }
+        </script>
+    </body>
+</body>
+
+</html>
